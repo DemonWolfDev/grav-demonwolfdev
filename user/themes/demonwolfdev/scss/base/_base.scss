@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+.img-circle {
+    border-radius: 50%;
+}
+
+// Center Row
+.row-centered {
+    text-align: center;
+}
+
+// Center Col
+.col-centered {
+    margin: 0 auto;
+    float: none;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}

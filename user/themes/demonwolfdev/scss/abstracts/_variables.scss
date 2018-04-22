@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+// Fonts
+$main-font: "Oswald", sans-serif;
+$second-font: "Lato", sans-serif;
+$legal-font: "Times New Roman", Times, serif;
+
+// Social Icons Color
+$twitter-color: #1da1f2;
+$twitch-color: #6441a5;
+$youtube-color: #cd201f;
+$github-color: #333;
+$google-plus-color: #dd4b39;
+$facebook-color: #3b5998;
+$social-icon: #ffffff;
+$social-icon_hover: #d4d4d4;
+
+// Brand Color
+$brand-color: #00328d;
+$brand-color-alt: #352f9d;
+$brand-color-alt-2: #6d66ff;
+
+// Buttons
+$button_background_font: #ffffff;
+$button_background: #00328d;
+$button_background_effect_font: #ffffff;
+$button_background_effect: #00328d;
+
+// Menu Links
+$nav-bgDefault: #ffffff;
+$nav-bgHighlight: #ffffff;
+$nav-colDefault: #352f9d;
+$nav-colHighlight: #00328d;
+$nav-dropdown: true;
+$nav-toggleBorder: #352f9d;
+$nav-toggleBackground: #ffffff;
+$nav-toggleIcon: #352f9d;
+
+// Footer Text
+$footer-color: #ffffff;
+$footer-color_link: #f2f2f2;
+$footer-background: $brand-color-alt-2;
+
+// Footer Legal
+$footer-color-legal: #000000;
+$footer-color_link-legal: #3D3D3D;

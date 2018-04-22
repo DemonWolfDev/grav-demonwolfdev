@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg {% if page.home %}fixed-top {% endif %} navbar-light" role="navigation">
+    <div class="container">
+        <!-- Desktop Logo -->
+        <a class="navbar-brand navbar-logo logo-desktop" href="{{ base_url == '' ? '/' : base_url }}">
+            <img alt="{{ config.site.title }}" src="{{ url('theme://images/logos/logo_text.png') }}">
+        </a>
+        <!-- Mobile Logo -->
+        <a class="navbar-brand navbar-logo logo-mobile" href="{{ base_url == '' ? '/' : base_url }}">
+            <img alt="{{ config.site.title }}" src="{{ url('theme://images/logos/logo.png') }}">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggel navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-lg-auto ">
+                {% for page in pages.children.visible %}
+                    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                    {% if config.themes.bootstrap.dropdown.enabled and page.children.visible.count > 0 %}
+                        <li class="nav-item dropdown {{ current_page }}">
+                            <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ page.menu }}</a>
+                            <ul class="dropdown-menu" aria-labelledby="menuDropdown" role="menu">
+                                {% set current_parent = page.active ? 'active' : '' %}
+                                <a class="dropdown-item {{ current_parent }}" href="{{ page.url }}">{{ page.menu }}</a>
+                                <div class="dropdown-divider"></div>
+                                {% for child in page.children.visible %}
+                                    {% set current_child = (child.active or child.activeChild) ? 'active' : '' %}
+                                    <a class="dropdown-item {{ current_child }}" href="{{ child.url }}">{{ child.menu }}</a>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="nav-item {{ current_page }}">
+                            <a class="nav-link" href="{{ page.url }}">{{ page.menu }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                {% for link in site.menu %}
+                    {% if link.url | contains('https') %}
+                        {% set domain = '' %}
+                    {% elseif link.url | contains('#') %}
+                        {% set domain = '' %}
+                    {% else %}
+                        {% set domain = base_url_absolute %}
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ domain }}{{ link.url }}" {% if link.url | contains('https') %} target="_blank" {% endif %}>{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

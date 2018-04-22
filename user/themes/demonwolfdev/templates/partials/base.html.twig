@@ -1,0 +1,88 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+    <head>
+        {% block head %}
+            <meta charset="utf-8"/>
+            <title>
+                {% if header.title %}{{ header.title|e('html') }}
+                    -
+                {% endif %}{{ site.title|e('html') }}</title>
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            {% include 'partials/metadata.html.twig' %}
+            {% include 'partials/icons.html.twig' %}
+
+            <link rel="canonical" href="{{ page.url(true, true) }}"/>
+
+            {% block stylesheets %}
+
+                {# Boostrap CSS #}
+                {% do assets.addCss('theme://lib/bootstrap/css/bootstrap.min.css', 100) %}
+                {# Narmailze CSS #}
+                {% do assets.addCss('theme://lib/normalize/css/normalize.css', 100) %}
+                {# Narmailze CSS #}
+                {% do assets.addCss('theme://lib/cookieconsent/css/cookieconsent.min.css', 100) %}
+                {# Font Awsome CSS #}
+                {% do assets.addCss('theme://lib/font-awesome/css/fontawesome-all.min.css', 100) %}
+                {# Main CSS #}
+                {% do assets.addCss('theme://css/main.css', 100) %}
+            {% endblock %}
+            {{ assets.css() }}
+
+            {% block javascripts %}
+                {# Jqery JS #}
+                {% do assets.addJs('theme://lib/jquery/js/jquery.min.js', 100) %}
+                {# Bootstrap JS #}
+                {% do assets.addJs('theme://lib/bootstrap/js/bootstrap.bundle.min.js', 99) %}
+                {# Cookie popup JS #}
+                {% do assets.addJs('theme://lib/cookieconsent/js/cookieconsent.min.js', 98) %}
+                {# Main JS #}
+                {% do assets.addJs('theme://js/main.js', 97) %}
+            {% endblock %}
+            {{ assets.js() }}
+
+            {# Google Analytics #}
+            {% include 'partials/google-analytics.html.twig' %}
+            {% include 'partials/google-structured-data.html.twig' %}
+        {% endblock head%}
+    </head>
+    <body id="top" class="{{ page.header.body_classes }}">
+        {% include 'partials/cookie-notice.html.twig' %}
+        {% block header_navigation %}
+            {% include 'partials/navigation.html.twig' %}
+        {% endblock %}
+
+        {% block body %}
+            <section id="body">
+                <div class="wrapper padding">
+                    {% block content %}{% endblock %}
+                </div>
+            </section>
+        {% endblock %}
+        {% if page.home == false %}
+            {% block footer %}
+                {# <footer>
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div class="content text-center">
+                                Copyright ©
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                <a href="{{ base_url_absolute }}">{{ site.title }}</a>
+                                |
+                                <a href="{{ base_url_absolute }}/legal/">Privacy Statement</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer> #}
+            {% endblock %}
+        {% endif %}
+        {% block bottom %}
+            {{ assets.js('bottom') }}
+        {% endblock %}
+
+    </body>
+</html>
