@@ -1,0 +1,19 @@
+<!-- Ofter Icons with infomation with discord widget-->
+<div class="ofter container" id="ofter">
+    <div class="row">
+        <div class="col-md-6 left">
+            {% for item in page.header.ofter %}
+                <div class="align-self-start media">
+                    <i class="{{ item.icon }} icons mr-3" aria-hidden="true"></i>
+                    <div class="media-body">
+                        <div class="header mt-0">{{ item.name }}</div>
+                        <div class="description">{{ item.description}}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4 offset-md-2 col-12 float-left right">
+            <iframe src="https://discordapp.com/widget?id=127607669103001600&theme=dark" width="320" height="250" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>

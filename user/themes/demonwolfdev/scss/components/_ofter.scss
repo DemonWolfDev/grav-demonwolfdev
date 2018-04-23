@@ -1,20 +1,33 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the ofter component.
 // -----------------------------------------------------------------------------
-.ofter-icons {
-    font-size: 58px;
-}
-@media (max-width: 768px) {
-    .ofter-icons {
-        font-size: 48px;
+.ofter {
+    .icons {
+        font-size: 42px;
     }
-}
-.ofter-header {
-    font-size: 1.5em;
-}
-.ofter-description {
-    font-size: 1.35em;
-}
-.col-ofter-description {
-    padding-left: 0px;
+
+    .header {
+        font-family: $main-font;
+        font-size: 1.15em;
+        font-weight: 700;
+    }
+
+    .description {
+        font-family: $second-font;
+        font-size: 1em;
+    }
+
+    .col-description {
+        display: block;
+    }
+
+    .left {
+        margin: auto 0;
+    }
+
+    @media (max-width: 768px) {
+        .ofter-icons {
+            font-size: 48px;
+        }
+    }
 }

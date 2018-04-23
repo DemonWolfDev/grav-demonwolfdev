@@ -1,0 +1,13 @@
+<!-- About the community -->
+<div class="about" id="about">
+    <div class="container">
+        <div class="header">
+            <p>{{ site.data.settings.about.header }}</p>
+        </div>
+        <div class="text">
+            {% for section in site.data.settings.about.text %}
+                <p>{{ section | textilize }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
