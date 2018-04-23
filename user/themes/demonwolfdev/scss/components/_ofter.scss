@@ -30,4 +30,16 @@
             font-size: 48px;
         }
     }
+
+    @media (min-width: 768px) {
+        .offset-md-2 {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .right {
+            margin: 0 auto;
+        }
+    }
 }

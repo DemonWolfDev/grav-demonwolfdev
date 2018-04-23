@@ -19,27 +19,35 @@
             {% block stylesheets %}
 
                 {# Boostrap CSS #}
-                {% do assets.addCss('theme://lib/bootstrap/css/bootstrap.min.css', 100) %}
+                {% do 
+                    assets.addCss('theme://lib/bootstrap/css/bootstrap.min.css', 100) %}
                 {# Narmailze CSS #}
-                {% do assets.addCss('theme://lib/normalize/css/normalize.css', 100) %}
+                {% do 
+                    assets.addCss('theme://lib/normalize/css/normalize.css', 100) %}
                 {# Narmailze CSS #}
-                {% do assets.addCss('theme://lib/cookieconsent/css/cookieconsent.min.css', 100) %}
+                {% do 
+                    assets.addCss('theme://lib/cookieconsent/css/cookieconsent.min.css', 100) %}
                 {# Font Awsome CSS #}
                 {% do assets.addCss('theme://lib/font-awesome/css/fontawesome-all.min.css', 100) %}
                 {# Main CSS #}
-                {% do assets.addCss('theme://css/main.css', 100) %}
+                {% do 
+                    assets.addCss('theme://css/main.css', 100) %}
             {% endblock %}
             {{ assets.css() }}
 
             {% block javascripts %}
                 {# Jqery JS #}
-                {% do assets.addJs('theme://lib/jquery/js/jquery.min.js', 100) %}
+                {% do 
+                    assets.addJs('theme://lib/jquery/js/jquery.min.js', 100) %}
                 {# Bootstrap JS #}
-                {% do assets.addJs('theme://lib/bootstrap/js/bootstrap.bundle.min.js', 99) %}
+                {% do 
+                    assets.addJs('theme://lib/bootstrap/js/bootstrap.bundle.min.js', 99) %}
                 {# Cookie popup JS #}
-                {% do assets.addJs('theme://lib/cookieconsent/js/cookieconsent.min.js', 98) %}
+                {% do 
+                    assets.addJs('theme://lib/cookieconsent/js/cookieconsent.min.js', 98) %}
                 {# Main JS #}
-                {% do assets.addJs('theme://js/main.js', 97) %}
+                {% do 
+                    assets.addJs('theme://js/main.js', 97) %}
             {% endblock %}
             {{ assets.js() }}
 
@@ -61,28 +69,42 @@
                 </div>
             </section>
         {% endblock %}
-        {% if page.home == false %}
-            {% block footer %}
-                {# <footer>
-                    <div class="container">
-                        <div class="col-md-12">
-                            <div class="content text-center">
+        {% block footer %}
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <div class="content">
                                 Copyright ©
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script>
                                 <a href="{{ base_url_absolute }}">{{ site.title }}</a>
-                                |
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="content text-center">
                                 <a href="{{ base_url_absolute }}/legal/">Privacy Statement</a>
                             </div>
                         </div>
+                        <div class="col-md-4 col-12 social">
+                            {% for item in config.site.social %}
+                                <li>
+                                    <a href="{{ item.url }}">
+                                        <i class="fab {{ item.class }} social-icon {% if loop.last %}last{% endif %} " aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </div>
                     </div>
-                </footer> #}
-            {% endblock %}
-        {% endif %}
-        {% block bottom %}
-            {{ assets.js('bottom') }}
-        {% endblock %}
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+{% block bottom %}
+    {{ assets.js('bottom') }}
+{% endblock %}
 
-    </body>
+</body>
 </html>

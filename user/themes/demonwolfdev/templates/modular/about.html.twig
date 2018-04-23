@@ -2,10 +2,10 @@
 <div class="about" id="about">
     <div class="container">
         <div class="header">
-            <p>{{ site.data.settings.about.header }}</p>
+            <p>{{ page.header.about.header }}</p>
         </div>
         <div class="text">
-            {% for section in site.data.settings.about.text %}
+            {% for section in page.header.about.text %}
                 <p>{{ section | textilize }}</p>
             {% endfor %}
         </div>

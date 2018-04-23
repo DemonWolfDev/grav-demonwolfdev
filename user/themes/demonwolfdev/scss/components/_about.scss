@@ -8,10 +8,13 @@
         color: #ffffff;
         font-size: 2em;
         text-align: center;
+        font-family: $main-font;
+        font-weight: 700;
     }
 
     .text {
         color: #ffffff;
         font-size: 1.35em;
+        font-family: $second-font;
     }
 }

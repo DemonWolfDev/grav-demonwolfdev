@@ -20,3 +20,16 @@ html {
     position: relative;
     min-height: 100%;
 }
+
+#hero {
+    padding-bottom: $content-spacing;
+}
+
+#ofter {
+    padding-top: $content-spacing;
+    padding-bottom: $content-spacing;
+}
+#about {
+    padding-top: $content-spacing;
+    padding-bottom: $content-spacing;
+}
