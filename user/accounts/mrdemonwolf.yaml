@@ -1,0 +1,11 @@
+email: demonwolf@demonwolfdev.com
+fullname: 'Nathan Henniges'
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$XVDTFygklnT.wGP6Qs5G6OKyeuPtUOFYCn.mJ/phYCJIq8y0hTsOy
