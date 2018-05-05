@@ -1,0 +1,20 @@
+<!-- Jumbotron CTA -->
+{% set image = page.media[page.header.cta.src].quality(100) %}
+{% set image_url = image.url %}
+<div class="jumbotron cta" id="cta" style="background: url({{ image_url }}) no-repeat bottom center; background-size:cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="jumbotron inner">
+                    <div class="header">{{ page.header.cta.header }}</div>
+                    <div class="text">
+                        {{ page.header.cta.text}}
+                    </div>
+                    <div class="cta-button">
+                        <a class="btn btn-primary btn-lg btn-cta" href="{{ page.header.ctaButton.url }}" role="button">{{ page.header.ctaButton.title }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
