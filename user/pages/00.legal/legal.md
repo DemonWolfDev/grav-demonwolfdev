@@ -2,8 +2,7 @@
 visible: false
 ---
 
-Privacy Policy
---------------
+<h1 id="privacy-policy">Privacy Policy</h1>
 
 DemonWolfDev operates the www.demonwolfdev.com website, which provides the SERVICE.
 
@@ -57,3 +56,23 @@ We may update our Privacy Policy from time to time. Thus, we advise you to revie
 **Contact Us**
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.
+
+<h1 id="terms-of-service">Terms of Service</h1>
+
+Please read these Terms of Service (hereafter known as “Agreement” and “Terms of Service”) carefully before using [www.DemonWolfDev.com](https://www.demonwolfdev.com/)(hereafter known as “the Site”) operated by DemonWolfDev (can also be DemonWolf Dev) (hereafter known as “us”, “we”, and “our”). This Agreement sets forth the legally binding terms and conditions for your use of the Site. By accessing or using the Site or any other of our services in any manner, including, but not limited to, visiting or browsing the Site or contributing content or other materials to the Site, you agree to be bound by these Terms of Service. Capitaliz
+
+**Refund Policy:** All sales associated with DemonWolfDev are final and there are no refunds available. We may transfer over ranks to a new user as long as both accounts have the same owner.
+
+**Intellectual Property:** The Site and its original content, and functionality are owned by DemonWolfDev and are protected by international copyright, trademark, patent, trade secret and other intellectual property and proprietary rights laws.
+
+**Termination:** We may terminate your access to the Site, without cause or notice, which may result in the forfeiture and destruction of all information associated with you. All provisions of this Agreement that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
+
+**Links To Other Sites:** Our Site may contain links to third-party sites that are not owned or controlled by DemonWolfDev. DemonWolfDev has no control and assumes no responsibility for, the content, privacy policies, or practices of any third party sites or services. We strongly advise you to read the terms and conditions and privacy policy of any third-party site that you visit.
+
+**Data Collection:** DemonWolfDev reserves the right for its administrative staff to, whether it be through text chat, server logs, virtual player data, or otherwise potentially incriminating data, record its community members. The data collected through these means may be used by DemonWolfDev against any party in the context of legal disputes, criminal activity, or other similar situations for which the data is deemed fit by DemonWolfDev.
+
+**Governing Law:** This Agreement (and any further rules, policies, or guidelines incorporated by reference) shall be governed and construed in accordance with the laws of Wisconsin, United States, without giving effect to any principles of conflicts of law.
+
+**Changes To This Agreement:** We reserve the right to, at our sole discretion, modify or replace these Terms of Service by posting the updated terms on the Site. Your continued use of the Site after any such changes constitutes your acceptance of the new Terms of Service. Please review this Agreement periodically for changes. If you do not agree to any of this Agreement or any changes to this Agreement, do not use, access or continue to access the Site or any other services to which the Terms apply.
+
+**Contact Us:** If you have any questions about this Agreement, please contact us [here](mailto:contact@demonwolfdev.com).
