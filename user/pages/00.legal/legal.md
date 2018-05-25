@@ -1,4 +1,6 @@
 ---
+title: Home
+menu: Home
 visible: false
 ---
 

@@ -11,19 +11,19 @@ author:
   url: https://www.keybase.com/mrdemonwolf/
 metadata:
     description: 'Are you passionate about tech, computers, creativity, and gaming? Grow with our community towards your goals. Join us today!'
-    keywords: community
-    generator: 
+    keywords: community,gaming,twitch,youtube,discord
+    generator:
 GoogleAnalytics: UA-104966812-1
 menu:
-  - 
+  -
     title: Discord
     url: 'https://discordapp.com/invite/A9x3qEN'
-  - 
+  -
     title: Support
     url: 'https://streamlabs.com/demonwolfdev'
 
 social:
-  - 
+  -
     class: fab fa-twitch twitch-color
     url: 'https://www.twitch.tv/demonwolfdev'
   -
